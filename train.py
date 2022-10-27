@@ -29,16 +29,18 @@ for intent in intents.find():
     # Añadir a la matriz tags
     tags.append(tag)
     for pattern in intent['patterns']:
+        # ignorar caracteres especiales
+        ignore_words = '¿?,.¡!'
+        res = pattern.translate(str.maketrans('', '', ignore_words))
         # Tokenizar cada palabra en la oracion
-        w = tokenize(pattern)
+        w = tokenize(res)
         # Añadir en en nuestra lista de palabras all_words
         all_words.extend(w)
         # Se añade cada oracion tokenizada a su tag
         xy.append((w, tag))
 
-# stem y convertir ignorar caracteres especiales
-ignore_words = ['¿','?', '.', '¡', '!', ',']
-all_words = [stem(w) for w in all_words if w not in ignore_words]
+# stem y convertir
+all_words = [stem(w) for w in all_words]
 # Eliminar palabras duplicadas
 all_words = sorted(set(all_words))
 tags = sorted(set(tags))
@@ -69,7 +71,7 @@ learning_rate = 0.001
 input_size = len(X_train[0])
 hidden_size = 8
 output_size = len(tags)
-print(input_size, output_size)
+
 
 class ChatDataset(Dataset):
 
@@ -98,16 +100,15 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
-
 for epoch in range(num_epochs):
     for (words, labels) in train_loader:
         words = words.to(device)
         labels = labels.to(dtype=torch.long).to(device)
         
-     
+        # hacia adelante
         outputs = model(words)
         loss = criterion(outputs, labels)
-        
+        # hacia atrás y optimizacion
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
@@ -115,9 +116,9 @@ for epoch in range(num_epochs):
     if (epoch+1) % 100 == 0:
         print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
-
 print(f'final loss: {loss.item():.4f}')
 
+# Guardado del modelo de datos a un Diccionario
 data = {
 "model_state": model.state_dict(),
 "input_size": input_size,
@@ -126,9 +127,7 @@ data = {
 "all_words": all_words,
 "tags": tags
 }
-
 FILE = "data.pth"
 torch.save(data, FILE)
-
 print(f'training complete. file saved to {FILE}')
 
