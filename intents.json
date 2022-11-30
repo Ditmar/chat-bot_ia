@@ -1,0 +1,133 @@
+[{
+  "_id": {
+    "$oid": "635f02517f4a0c0acd033ace"
+  },
+  "tag": "saludo",
+  "patterns": [
+    "Hola",
+    "Buen dia",
+    "Buenas tardes",
+    "Buenas noches",
+    "necesito ayuda"
+  ],
+  "responses": "Hola, ¿puedo ayudarte en algo? 😄"
+},{
+  "_id": {
+    "$oid": "635f02517f4a0c0acd033acf"
+  },
+  "tag": "adios",
+  "patterns": [
+    "Adios",
+    "Nos vemos",
+    "Hasta luego",
+    "Bye"
+  ],
+  "responses": "Nos vemos despues 😊"
+},{
+  "_id": {
+    "$oid": "635f02517f4a0c0acd033ad0"
+  },
+  "tag": "estado",
+  "patterns": [
+    "¿Como estas?",
+    "¿Estas bien?",
+    "¿Como te sientes?"
+  ],
+  "responses": "Estoy muy bien, gracias por preguntar ❤"
+},{
+  "_id": {
+    "$oid": "635f02517f4a0c0acd033ad1"
+  },
+  "tag": "inicio_clases",
+  "patterns": [
+    "¿Cuando empiezan las clases?",
+    "¿Que dia empiezan las clases?",
+    "¿Cuando son las clases?",
+    "Puedes decirme, ¿Cuando comienzan las clases?",
+    "¿Cuando inician las clases?",
+    "Inicio de clases"
+  ],
+  "responses": "Las clases inician este 4 de febrero"
+},{
+  "_id": {
+    "$oid": "635f02517f4a0c0acd033ad2"
+  },
+  "tag": "horario",
+  "patterns": [
+    "Horarios",
+    "¿Cuales son los horarios?",
+    "¿Puedes darme los nuevos horarios?",
+    "¿Tienes los horarios?",
+    "¿Horarios por favor?",
+    "¿Donde puedo ver los horarios?",
+    "¿Puedes pasarme los horarios?"
+  ],
+  "responses": "Aqui tienes los horarios para que puedas descargarlos 😄 <a href='https://drive.google.com/drive/folders/1onF9W_Iow4G8r5-VoQspspUVRBSFlMgr?usp=sharing'>Horario de clases gestion 2/2022</a>"
+},{
+  "_id": {
+    "$oid": "635f02517f4a0c0acd033ad3"
+  },
+  "tag": "docentes",
+  "patterns": [
+    "Docentes",
+    "¿Quienes son los docentes?",
+    "¿Puedes darme la lista de docentes?",
+    "¿Quienes seran los docentes designados este año?"
+  ],
+  "responses": "Aqui tienes a los docentes designados para este semestre 😃 <a href='https://drive.google.com/drive/folders/1nBt5eEgdm-ckqmDumMHObkdXoFcoe6JM?usp=sharing'>Lista de docentes gestion 2/2022</a>"
+},{
+  "_id": {
+    "$oid": "635f02517f4a0c0acd033ad4"
+  },
+  "tag": "mod_clases",
+  "patterns": [
+    "¿Como se pasara clases?",
+    "¿Las clases seran precenciales?",
+    "¿Las clases seran virtuales?",
+    "¿Como seran las clases?",
+    "clases virtuales",
+    "clases precenciales",
+    "¿cual sera la modalidad de clases?",
+    "¿cual sera la modalidad de clases este semestre?",
+    "¿cual sera la modalidad de clases esta gestion?"
+  ],
+  "responses": "Las clases se daran de manera precencial"
+},{
+  "_id": {
+    "$oid": "635f02517f4a0c0acd033ad5"
+  },
+  "tag": "entrega_certificados",
+  "patterns": [
+    "Certificado de notas",
+    "Donde se dara el certificado de notas",
+    "Direccion para el certificado de notas",
+    "Curso para la entrega de certificado de notas",
+    "¿Estan entregando certificado de notas?",
+    "¿Como debo recoger el certificado de notas?",
+    "¿Donde puedo recoger el certificado de notas?"
+  ],
+  "responses": "El recojo del certificado de notas es en Ciudadela Universitaria en edificio de Ingenieria de Sistemas en direccion, el costo para recoger el certificado es de 2bs"
+},{
+  "_id": {
+    "$oid": "63744d2728a07a1c4e26ae26"
+  },
+  "tag": "Fprog_Materias",
+  "patterns": [
+    "¿Cuando sera la programacion de materias?",
+    "¿Hasta cuando es la programacion de materias?",
+    "¿Ya puedo programar materias?",
+    "¿Hasta que fecha es la programacion de materias?"
+  ],
+  "responses": "La programacion de materias es hasta el 10 de febrero, si aun no lo hiciste ingresa con tu cuenta a la siguiente pagina 👉<a href='https://estudiantes.uatf.edu.bo/login'>Estudiantes</a> y selecciona la opcion \"Programacion de Materias\""
+},{
+  "_id": {
+    "$oid": "6374556f28a07a1c4e26ae27"
+  },
+  "tag": "prog_Materias",
+  "patterns": [
+    "¿Como puedo programar materias?",
+    "¿Donde puedo programar materias?",
+    "Quiero programar materias"
+  ],
+  "responses": "Para programar tus materias ingresa con tu cuenta a la siguiente pagina 👉<a href='https://estudiantes.uatf.edu.bo/login'>Estudiantes</a> y selecciona la opcion \"Programacion de Materias\""
+}]
