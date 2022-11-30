@@ -2,10 +2,6 @@
 
 Implemenacion de sistema Chatbot
 
-Esto da 2 opciones de implementación:
-- Despliegue dentro de la aplicación Flask con la plantilla jinja2
-- Sirva solo la API de predicción de Flask. Los archivos html y javascript utilizados se pueden incluir en cualquier aplicación Frontend (con solo una ligera modificación) y se pueden ejecutar completamente separados de la aplicación Flask.
-
 ## Configuración inicial:
 
 Clonar repositorio y crear un entorno virtual
